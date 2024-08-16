@@ -1,5 +1,5 @@
 // connect to socket server
-const socket = io.connect("https://pepboard-1.onrender.com");
+const socket = io.connect("https://realtimewhiteboard-mohd-talib.netlify.app/");
 // *********************************Basic Setup
 const board = document.querySelector(".board");
 board.height = window.innerHeight;
@@ -35,8 +35,7 @@ function handleColorChange(color) {
 const hamburger = document.querySelector(".hamburger");
 const toolPanel = document.querySelector(".tool-panel");
 hamburger.addEventListener("click", function () {
-  handleHamburger()
+  handleHamburger();
 
   socket.emit("hamburger");
 });
-
